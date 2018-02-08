@@ -1,9 +1,13 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
+const mongoose = require('mongoose');
 
 const app = express();
 
 app.set('port', (process.env.PORT || 4000));
+
+const db = require('./app/config/db');
+mongoose.connect(db.url);
 
 const { Pin, PinRoot } = require('./app/schema');
 

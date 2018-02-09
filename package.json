@@ -17,10 +17,11 @@
     "url": "https://github.com/asitaru/Pinterest-Clone/issues"
   },
   "engines": {
-    "node": "6.11.3"
+    "node": "8.9.4"
   },
   "homepage": "https://github.com/asitaru/Pinterest-Clone#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.10.0",

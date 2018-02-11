@@ -9,7 +9,12 @@ mongoose.connect(db.url);
 const app = express();
 app.use(cors());
 app.set('port', (process.env.PORT || 4000));
-app.use(express.static(__dirname + '/public'));
+
+app.use(express.static(__dirname + '/static'));
+
+app.get('/', (req,res) => {
+    res.sendFile('/index.html');
+});
 
 const Schema = require('./app/schemas/schema');
 app.use('/graphql', graphqlHTTP({

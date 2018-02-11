@@ -31,9 +31,6 @@
     "mongoose": "^5.0.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "webpack": "^1.12.14"
-  },
-  "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
@@ -48,6 +45,10 @@
     "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+
     "webpack-dev-server": "^1.14.1"
   }
 }

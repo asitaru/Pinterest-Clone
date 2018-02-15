@@ -5,8 +5,18 @@ const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
 
+// const passport = require('passport');
+// const configurePassport = require('./app/config/passport');
+
 const db = require('./app/config/db');
-mongoose.connect(db.url);
+mongoose.connect(db.url).then(
+    () => {
+        console.log("Connection established successfully");
+    },
+    () => {
+        console.log("Error connecting to MLab");
+    }
+);
 
 const app = express();
 app.use(cors());
@@ -18,13 +28,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/static'));
 
+// configurePassport(app, passport);
+
 const Schema = require('./app/schemas/schema');
 app.use('/graphql', graphqlHTTP({
     schema: Schema,
     graphiql: true
 }));
 
-app.get('/*', (req,res) => {
+app.get('*', (req,res) => {
     res.sendFile('index.html', { root: path.join(__dirname, 'static') });
 });
 

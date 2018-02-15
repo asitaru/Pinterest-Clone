@@ -5,20 +5,21 @@ import Navbar from './Navbar/Navbar.jsx';
 import Home from './Home/Home.jsx';
 import UserPins from './UserPins/UserPins.jsx';
 import Recent from './Recent/Recent.jsx';
+import FullscreenPin from './Pins/FullscreenPin.jsx';
 
 class App extends Component {
     render () {
         return (
             <div>
                 <Navbar />
-                <div>
+                <div className="full-container">
                     <Route exact path="/" component={Home}/>
-                </div>
-                <div>
+
                     <Route path="/my-pins" component={UserPins}/>
-                </div>
-                <div>
+
                     <Route path="/recent" component={Recent}/>
+
+                    <Route path="/pin/:id" component={FullscreenPin} />
                 </div>
             </div>
         )

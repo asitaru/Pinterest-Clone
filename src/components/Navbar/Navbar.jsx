@@ -6,7 +6,7 @@ import axios from 'axios';
 class Navbar extends Component {
 
     Login () {
-        axios.get('http://localhost:4000/api/login/callback'
+        axios.get('https://react-pinterest.herokuapp.com/api/login/callback'
         ).then(console.log);
     }
 

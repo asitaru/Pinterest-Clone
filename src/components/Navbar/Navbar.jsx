@@ -1,7 +1,14 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+import axios from 'axios';
+
 class Navbar extends Component {
+
+    Login () {
+        axios.get('http://localhost:4000/api/login/callback'
+        ).then(console.log);
+    }
 
     render () {
         return (
@@ -23,7 +30,7 @@ class Navbar extends Component {
                         </ul>
                         <div className="navbar-right">
                             <ul className="nav navbar-nav">
-                                <li><Link to="/login">Login</Link></li>
+                                <li><a onClick={this.Login.bind(this)}>Login</a></li>
                                 <li>
                                     <a className="droppdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="glyphicon glyphicon-option-horizontal"></i></a>
                                     <ul className="dropdown-menu">

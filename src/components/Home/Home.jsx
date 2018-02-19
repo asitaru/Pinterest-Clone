@@ -3,6 +3,7 @@ import axios from 'axios';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 
 import Pin from '../Pins/Pin.jsx';
+import Constants from '../../app.config';
 
 class Home extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Home extends Component {
     }
 
     componentWillMount() {
-        axios.get('https://react-pinterest.herokuapp.com/graphql?query={pins{_id,title,url}}'
+        axios.get(Constants.baseUrl + 'graphql?query={pins{_id,title,url}}'
         ).then( response => {
             this.setState({pins: response.data.data.pins});
             console.log(response.data.data.pins);

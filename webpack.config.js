@@ -7,6 +7,7 @@ module.exports = {
         path: path.join(__dirname, 'static', 'js'),
         filename: 'bundle.js'
     },
+    devtool: "#eval-source-map",
     plugins: [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({

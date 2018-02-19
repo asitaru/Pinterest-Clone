@@ -6,6 +6,7 @@ import Home from './Home/Home.jsx';
 import UserPins from './UserPins/UserPins.jsx';
 import Recent from './Recent/Recent.jsx';
 import FullscreenPin from './Pins/FullscreenPin.jsx';
+import Auth from './Auth/Auth.jsx';
 
 class App extends Component {
     render () {
@@ -20,6 +21,8 @@ class App extends Component {
                     <Route path="/recent" component={Recent}/>
 
                     <Route path="/pin/:id" component={FullscreenPin} />
+
+                    <Route path="/auth" component={Auth} />
                 </div>
             </div>
         )

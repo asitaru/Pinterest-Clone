@@ -87,6 +87,73 @@ body {
     background-color: white;
 }
 
+.auth-container {
+    max-width: 350px;
+    margin: 40px auto;
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid #d7d6d6;
+}
+
+.auth-box {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.auth-box-logo {
+    margin-bottom: 20px;
+}
+
+.auth-box-logo img {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.auth-box h4 {
+    font-weight: bold;
+}
+
+.auth-form {
+    max-width: 250px;
+    margin: 20px auto 10px;
+}
+
+.auth-form .form-control {
+    border-radius: 4px;
+}
+
+.auth-form button {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.auth-form p {
+    margin: 0;
+}
+
+.auth-form .btn-success span {
+    display: block;
+}
+
+.auth-form .btn-success span:first-of-type {
+    width: 10%;
+}
+
+.auth-form .btn-success span:last-of-type {
+    width: 90%;
+}
+
+.auth-form .register-button {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.register-link {
+    padding-top: 10px;
+}
+
 .pin-container-actions {
     padding: 20px 20px 0 20px;
 }
@@ -107,4 +174,18 @@ body {
     border: 1px solid #f3f3f3;
     width: 100%;
     border-radius: 6px;
+}
+
+.btn-icon {
+    max-width: 20px;
+    float: left;
+}
+
+.spacer-bottom {
+    padding-bottom: 7px;
+}
+
+.spacer {
+    padding-bottom: 10px;
+    padding-top: 10px;
 }

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
+import Constants from '../../app.config';
+
 class FullscreenPin extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +12,7 @@ class FullscreenPin extends Component {
     }
 
     componentWillMount() {
-        axios.post("https://react-pinterest.herokuapp.com/graphql", {
+        axios.post(Constants.baseUrl + "graphql", {
             query: `{pin(_id: "${this.props.match.params.id}") {_id, title, url }}`
         }).then( response => {
             this.setState({pin: response.data.data.pin});
